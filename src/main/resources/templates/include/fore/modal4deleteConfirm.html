@@ -1,0 +1,16 @@
+<div th:fragment="html" >
+    <div class="modal" id="deleteConfirmModal" role="dialog" tabindex="-1" >
+        <div class="modal-dialog deleteConfirmModalDiv">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">确认删除？</h4>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type="button">关闭</button>
+                    <button class="btn btn-primary deleteConfirmButton" id="submit" type="button">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

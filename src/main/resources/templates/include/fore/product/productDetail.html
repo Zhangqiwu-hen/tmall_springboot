@@ -1,0 +1,20 @@
+<div th:fragment="html">
+    <div class="productDetailDiv" v-show="showDetail" >
+        <div class="productDetailTopPart">
+            <a class="productDetailTopPartSelectedLink selected" href="#nowhere">商品详情</a>
+            <a @click="toggle2Review" class="productDetailTopReviewLink" href="#nowhere">累计评价 <span class="productDetailTopReviewLinkNumber">{{p.reviewCount}}</span> </a>
+        </div>
+
+        <div class="productParamterPart">
+            <div class="productParamter">产品参数：</div>
+            <div class="productParamterList">
+                <span v-for="pv in pvs" >{{pv.property.name}}: {{pv.value | subStringFilter(0,10)}} </span>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div class="productDetailImagesPart">
+            <img :src="'img/productDetail/'+pi.id+'.jpg'" v-for="pi in p.productDetailImages">
+        </div>
+    </div>
+</div>
